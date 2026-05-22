@@ -1,13 +1,12 @@
 package models
 
 import (
+	"go-trading/config"
+	"go-trading/tradingalgo"
 	"sort"
 	"time"
 
 	"github.com/markcheno/go-talib"
-
-	"gotrading/config"
-	"gotrading/tradingalgo"
 )
 
 type DataFrameCandle struct {

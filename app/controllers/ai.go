@@ -1,17 +1,17 @@
 package controllers
 
 import (
-	"github.com/markcheno/go-talib"
+	"go-trading/app/models"
+	"go-trading/bitflyer"
+	"go-trading/tradingalgo"
+	"go-trading/config"
 	"log"
 	"strings"
 	"time"
 
-	"golang.org/x/sync/semaphore"
+	"github.com/markcheno/go-talib"
 
-	"gotrading/app/models"
-	"gotrading/bitflyer"
-	"gotrading/config"
-	"gotrading/tradingalgo"
+	"golang.org/x/sync/semaphore"
 )
 
 type AI struct {

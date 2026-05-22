@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"gotrading/config"
+	"go-trading/config"
 )
 
 type SignalEvent struct {

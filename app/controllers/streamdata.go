@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"gotrading/app/models"
-	"gotrading/bitflyer"
-	"gotrading/config"
+	"go-trading/app/models"
+	"go-trading/bitflyer"
+	"go-trading/config"
 	"log"
 )
 

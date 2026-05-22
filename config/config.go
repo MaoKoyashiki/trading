@@ -1,10 +1,11 @@
 package config
 
 import (
-	"gopkg.in/ini.v1"
 	"log"
 	"os"
 	"time"
+
+	"gopkg.in/ini.v1"
 )
 
 type ConfigList struct {

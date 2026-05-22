@@ -3,8 +3,10 @@ package models
 import (
 	"database/sql"
 	"fmt"
+	"go-trading/config"
+
 	_ "github.com/mattn/go-sqlite3"
-	"gotrading/config"
+
 	"log"
 	"time"
 )

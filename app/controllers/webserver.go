@@ -3,14 +3,13 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"gotrading/app/models"
+	"go-trading/app/models"
+	"go-trading/config"
 	"html/template"
 	"log"
 	"net/http"
 	"regexp"
 	"strconv"
-
-	"gotrading/config"
 )
 
 var templates = template.Must(template.ParseFiles("app/views/chart.html"))

@@ -2,7 +2,8 @@ package models
 
 import (
 	"fmt"
-	"gotrading/bitflyer"
+	"go-trading/bitflyer"
+
 	"time"
 )
 
