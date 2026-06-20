@@ -3,8 +3,8 @@ package controllers
 import (
 	"go-trading/app/models"
 	"go-trading/bitflyer"
-	"go-trading/tradingalgo"
 	"go-trading/config"
+	"go-trading/tradingalgo"
 	"log"
 	"strings"
 	"time"
@@ -65,6 +65,10 @@ func NewAI(productCode string, duration time.Duration, pastPeriod int, UsePercen
 
 func (ai *AI) UpdateOptimizeParams() {
 	df, _ := models.GetAllCandle(ai.ProductCode, ai.Duration, ai.PastPeriod)
+	if df == nil {
+		log.Println("warning: no candle data available for optimization")
+		return
+	}
 	ai.OptimizedTradeParams = df.OptimizeParams()
 	log.Printf("optimized_trade_params=%+v", ai.OptimizedTradeParams)
 }
@@ -97,7 +101,15 @@ func (ai *AI) Trade() {
 	}
 	defer ai.TradeSemaphore.Release(1)
 	params := ai.OptimizedTradeParams
+	if params == nil {
+		log.Println("warning: trade params not optimized yet")
+		return
+	}
 	df, _ := models.GetAllCandle(ai.ProductCode, ai.Duration, ai.PastPeriod)
+	if df == nil {
+		log.Println("warning: no candle data available for trading")
+		return
+	}
 	lenCandles := len(df.Candles)
 
 	var emaValues1 []float64
