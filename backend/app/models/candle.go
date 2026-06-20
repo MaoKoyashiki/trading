@@ -2,7 +2,7 @@ package models
 
 import (
 	"fmt"
-	"go-trading/bitflyer"
+	"go-trading/backend/bitflyer"
 
 	"time"
 )

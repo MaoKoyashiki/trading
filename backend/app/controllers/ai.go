@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"go-trading/app/models"
-	"go-trading/bitflyer"
-	"go-trading/config"
-	"go-trading/tradingalgo"
+	"go-trading/backend/app/models"
+	"go-trading/backend/bitflyer"
+	"go-trading/backend/config"
+	"go-trading/backend/tradingalgo"
 	"log"
 	"strings"
 	"time"

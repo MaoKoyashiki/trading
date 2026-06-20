@@ -3,8 +3,8 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"go-trading/app/models"
-	"go-trading/config"
+	"go-trading/backend/app/models"
+	"go-trading/backend/config"
 	"html/template"
 	"log"
 	"net/http"

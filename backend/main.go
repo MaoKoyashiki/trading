@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-trading/app/controllers"
-	"go-trading/config"
-	"go-trading/utils"
+	"go-trading/backend/app/controllers"
+	"go-trading/backend/config"
+	"go-trading/backend/utils"
 	"log"
 )
 

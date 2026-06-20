@@ -1,8 +1,8 @@
 package models
 
 import (
-	"go-trading/config"
-	"go-trading/tradingalgo"
+	"go-trading/backend/config"
+	"go-trading/backend/tradingalgo"
 	"sort"
 	"time"
 
